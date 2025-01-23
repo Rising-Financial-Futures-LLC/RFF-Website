@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rising Financial Futures</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -13,66 +14,8 @@
             color: #333;
             scroll-behavior: smooth;
         }
-        header {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(90deg, #00487c, #88c9bf);
-            color: white;
-            text-align: center;
-            overflow: hidden;
-        }
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            opacity: 0.5;
-            z-index: 0;
-        }
-        header img {
-            width: 200px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-            animation: fadeIn 2s ease-in-out;
-        }
-        header p {
-            font-size: 1.5rem;
-            position: relative;
-            z-index: 1;
-            animation: fadeIn 2.5s ease-in-out;
-        }
-        header .cta {
-            margin-top: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        header .cta a {
-            text-decoration: none;
-            color: white;
-            background: #0077b6;
-            padding: 1rem 2rem;
-            margin: 0 0.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        header .cta a:hover {
-            background: #005f8a;
-        }
+
+        /* Navigation Bar */
         nav {
             position: sticky;
             top: 0;
@@ -97,62 +40,114 @@
         nav a:hover {
             color: #0077b6;
         }
-        section {
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #00487c, #88c9bf);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header img {
+            width: 200px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+        header .cta {
+            margin-top: 1.5rem;
+            z-index: 1;
+        }
+        header .cta a {
+            text-decoration: none;
+            color: white;
+            background: #0077b6;
+            padding: 1rem 2rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        header .cta a:hover {
+            background: #005f8a;
+        }
+
+        /* Services Section */
+        section#services {
             padding: 4rem 2rem;
             text-align: center;
             background: #f9f9f9;
-            animation: fadeInUp 1s ease-in-out;
         }
-        section:nth-child(even) {
-            background: #e8f6f3;
+        section#services h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
         }
-        .services {
+        .services-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
             flex-wrap: wrap;
+            gap: 2rem;
         }
-        .services div {
-            background: #fff;
+        .service-card {
+            background: white;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             flex: 1 1 calc(30% - 2rem);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
-        .services div:hover {
+        .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        .video-section iframe {
-            width: 80%;
-            height: 450px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .service-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
         }
+        .service-card p {
+            color: #666;
+        }
+        .service-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .service-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
         footer {
             background: #00487c;
             color: white;
             padding: 2rem 0;
             text-align: center;
         }
-        footer nav a {
+        footer a {
             color: #88c9bf;
             text-decoration: none;
             margin: 0 0.5rem;
-            transition: color 0.3s ease;
         }
-        footer nav a:hover {
-            color: #fff;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        footer a:hover {
+            color: white;
         }
     </style>
 </head>
@@ -160,70 +155,51 @@
 
 <nav>
     <div>
-        <img src="logo.png">
+        <img src="logo.png" alt="Rising Financial Futures Logo">
     </div>
     <div>
         <a href="#services">Services</a>
-        <a href="#video">About</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <header>
-    <img src="logo.png">
+    <img src="logo.png" alt="Rising Financial Futures Logo">
     <h1>Rising Financial Futures</h1>
     <p>Empowering Small Business Owners and Young Professionals to Build Financial Freedom</p>
     <div class="cta">
-        <a href="#consultation">Schedule Your Free Consultation</a>
-        <a href="#login">Log In to Member Portal</a>
+        <a href="#services">Explore Services</a>
+        <a href="#contact">Contact Us</a>
     </div>
 </header>
 
 <section id="services">
     <h2>Our Services</h2>
-    <div class="services">
-        <div>
-            <h3>Bookkeeping Made Easy</h3>
-            <p>Stay organized and focus on growth with our seamless bookkeeping services.</p>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>Bookkeeping</h3>
+            <p>Stay organized with tailored bookkeeping services for your business.</p>
+            <a href="bookkeeping.html">Learn More</a>
         </div>
-        <div>
-            <h3>Personalized Financial Guidance</h3>
-            <p>Whether you're just starting out or scaling your business, we’ll design a plan just for you.</p>
+        <div class="service-card">
+            <h3>Financial Planning</h3>
+            <p>Create a roadmap for your financial success with our expert guidance.</p>
+            <a href="financial-planning.html">Learn More</a>
         </div>
-        <div>
-            <h3>Member-Exclusive Resources</h3>
-            <p>Access tools, templates, and guidance tailored to your goals.</p>
+        <div class="service-card">
+            <h3>Business Consulting</h3>
+            <p>Optimize your business operations with our proven strategies.</p>
+            <a href="business-consulting.html">Learn More</a>
         </div>
-    </div>
-</section>
-
-<section id="video">
-    <h2>Learn More About Us</h2>
-    <p>Watch our introductory video to see how we can help you achieve your financial goals.</p>
-    <iframe src="https://www.youtube.com/embed/example" allowfullscreen></iframe>
-</section>
-
-<section id="testimonials">
-    <h2>What Our Clients Are Saying</h2>
-    <div class="testimonials">
-        <blockquote>
-            <p>"Rising Financial Futures gave me the confidence to grow my business!"</p>
-            <cite>– Sarah T., Wellness Shop Owner</cite>
-        </blockquote>
-        <blockquote>
-            <p>"The personalized financial guidance was exactly what I needed to take my finances to the next level."</p>
-            <cite>– John D., Small Business Owner</cite>
-        </blockquote>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2025 Rising Financial Futures. All Rights Reserved.</p>
     <nav>
-        <a href="#">Home</a>
         <a href="#services">Services</a>
-        <a href="#video">About</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
 </footer>
