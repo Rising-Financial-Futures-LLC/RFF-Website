@@ -87,53 +87,6 @@
             background: #005f8a;
         }
 
-        /* Services Section */
-        section#services {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: #f9f9f9;
-        }
-        section#services h2 {
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(30% - 2rem);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .service-card h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .service-card p {
-            color: #666;
-        }
-        .service-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #0077b6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .service-card a:hover {
-            text-decoration: underline;
-        }
-
         /* Footer */
         footer {
             background: #00487c;
@@ -153,54 +106,36 @@
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav>
     <div>
         <img src="logo.png" alt="Rising Financial Futures Logo">
     </div>
     <div>
         <a href="services.html">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
 
+<!-- Hero Section -->
 <header>
     <img src="logo.png" alt="Rising Financial Futures Logo">
     <h1>Rising Financial Futures</h1>
     <p>Empowering Small Business Owners and Young Professionals to Build Financial Freedom</p>
     <div class="cta">
-        <a href="#services">Explore Services</a>
-        <a href="#contact">Contact Us</a>
+        <a href="services.html">Explore Services</a>
+        <a href="contact.html">Contact Us</a>
     </div>
 </header>
 
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services-container">
-        <div class="service-card">
-            <h3>Bookkeeping</h3>
-            <p>Stay organized with tailored bookkeeping services for your business.</p>
-            <a href="bookkeeping.html">Learn More</a>
-        </div>
-        <div class="service-card">
-            <h3>Financial Planning</h3>
-            <p>Create a roadmap for your financial success with our expert guidance.</p>
-            <a href="financial-planning.html">Learn More</a>
-        </div>
-        <div class="service-card">
-            <h3>Business Consulting</h3>
-            <p>Optimize your business operations with our proven strategies.</p>
-            <a href="business-consulting.html">Learn More</a>
-        </div>
-    </div>
-</section>
-
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 Rising Financial Futures. All Rights Reserved.</p>
     <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </footer>
 
