@@ -6,14 +6,19 @@
     <title>Our Services - Rising Financial Futures</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
             background: #f9f9f9;
+            color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
+
+        /* Navigation Bar */
         nav {
+            position: sticky;
+            top: 0;
             background: white;
             padding: 1rem 2rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -30,73 +35,139 @@
         nav a:hover {
             color: #0077b6;
         }
-        h1 {
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #00487c, #88c9bf);
+            color: white;
             text-align: center;
-            margin: 2rem 0;
-            color: #00487c;
+            padding: 4rem 2rem;
         }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Section */
         .services-container {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 2rem;
+            justify-content: center;
             padding: 2rem;
         }
         .service-card {
             background: white;
-            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
             flex: 1 1 calc(30% - 2rem);
             max-width: 300px;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .service-card h3 {
-            margin: 1rem 0;
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #00487c;
         }
         .service-card p {
             color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
         .service-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            text-decoration: none;
             color: #0077b6;
+            text-decoration: none;
             font-weight: bold;
         }
         .service-card a:hover {
             text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #00487c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        footer a {
+            color: #88c9bf;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            color: white;
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <div>
+        <a href="index.html">Home</a>
+    </div>
+    <div>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </nav>
 
-<h1>Our Services</h1>
+<header>
+    <h1>Our Services</h1>
+    <p>Discover our range of services designed to empower your financial future.</p>
+</header>
 
 <div class="services-container">
     <div class="service-card">
-        <h3>Bookkeeping</h3>
-        <p>Stay organized and grow your business with our tailored bookkeeping services.</p>
-        <a href="bookkeeping.html">Learn More</a>
-    </div>
-    <div class="service-card">
-        <h3>Financial Planning</h3>
-        <p>Create a clear path to financial success with expert advice and strategies.</p>
-        <a href="financial-planning.html">Learn More</a>
+        <h3>Accounting & Bookkeeping</h3>
+        <p>Keep your finances organized and up to date with our professional bookkeeping services.</p>
+        <a href="accounting-bookkeeping.html">Learn More</a>
     </div>
     <div class="service-card">
         <h3>Business Consulting</h3>
-        <p>Optimize your business operations and achieve sustainable growth.</p>
+        <p>Grow your business with expert advice and customized strategies for success.</p>
         <a href="business-consulting.html">Learn More</a>
     </div>
+    <div class="service-card">
+        <h3>Books Cleanup</h3>
+        <p>Fix errors and discrepancies in your financial records with our expert assistance.</p>
+        <a href="books-cleanup.html">Learn More</a>
+    </div>
+    <div class="service-card">
+        <h3>Budgeting & Forecasting</h3>
+        <p>Plan for the future with detailed budgeting and financial forecasting.</p>
+        <a href="budgeting-forecasting.html">Learn More</a>
+    </div>
+    <div class="service-card">
+        <h3>Business Planning</h3>
+        <p>Create a roadmap to achieve your business goals with our comprehensive planning services.</p>
+        <a href="business-planning.html">Learn More</a>
+    </div>
+    <div class="service-card">
+        <h3>Individual Services</h3>
+        <p>Get tailored solutions for your unique financial needs.</p>
+        <a href="individual-services.html">Learn More</a>
+    </div>
 </div>
+
+<footer>
+    <p>&copy; 2025 Rising Financial Futures. All Rights Reserved.</p>
+    <a href="index.html">Home</a> | 
+    <a href="services.html">Services</a> | 
+    <a href="about.html">About</a> | 
+    <a href="contact.html">Contact</a>
+</footer>
 
 </body>
 </html>
