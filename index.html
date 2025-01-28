@@ -19,8 +19,9 @@
             font-family: 'Playfair Display', serif;
             color: #00487c;
         }
-/* General Navigation Link Styles */
-nav a { 
+
+        /* Navigation Bar */
+        nav {
             position: fixed;
             top: 0;
             width: 100%;
@@ -32,13 +33,6 @@ nav a {
             align-items: center;
             z-index: 1000;
             transition: background 0.3s ease;
-            
-    color: #00487c; /* Default link color */
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 1rem;
-    transition: color 0.3s ease; /* Smooth color transition */
-    
         }
         nav.scrolled {
             background: #00487c; /* Solid blue on scroll */
@@ -48,17 +42,17 @@ nav a {
             width: 120px;
         }
         nav a {
-            color: #00487c;
+            color: #00487c; /* Default link color */
             text-decoration: none;
             font-weight: bold;
             margin: 0 1rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease; /* Smooth color transition */
         }
         nav.scrolled a {
-            color: white;
+            color: white; /* Link color when navbar changes on scroll */
         }
         nav a:hover {
-            color: #88c9bf;
+            color: #88c9bf; /* Hover color for links */
         }
 
         /* Hero Section */
@@ -68,7 +62,7 @@ nav a {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('sunrise.png') no-repeat center center/cover;
+            background: url('sunrise.png') no-repeat center center/cover; /* Background image */
             position: relative;
             text-align: center;
         }
