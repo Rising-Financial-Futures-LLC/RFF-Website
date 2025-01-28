@@ -19,9 +19,8 @@
             font-family: 'Playfair Display', serif;
             color: #00487c;
         }
-
-        /* Navigation Bar */
-        nav {
+/* General Navigation Link Styles */
+nav a { 
             position: fixed;
             top: 0;
             width: 100%;
@@ -33,6 +32,13 @@
             align-items: center;
             z-index: 1000;
             transition: background 0.3s ease;
+            
+    color: #00487c; /* Default link color */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+    
         }
         nav.scrolled {
             background: #00487c; /* Solid blue on scroll */
