@@ -13,19 +13,19 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
-            background-color: #f8f3ec; /* Tan background */
+            background-color: #f8f3ec;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #00487c;
+            color: white;
         }
 
         /* Navigation Bar */
         nav {
             position: sticky;
             top: 0;
-            background: #ffffff;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
             padding: 1rem 2rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
@@ -37,7 +37,7 @@
             width: 120px;
         }
         nav a {
-            color: #00487c;
+            color: white;
             text-decoration: none;
             font-weight: bold;
             margin: 0 1rem;
@@ -54,24 +54,40 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(180deg, #ffffff, #f8f3ec);
+            background: url('https://source.unsplash.com/1920x1080/?sunrise') no-repeat center center/cover;
+            position: relative;
+            color: white;
             text-align: center;
-            padding: 2rem;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 0;
         }
         header img {
             width: 200px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
+            z-index: 1;
         }
         header p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
+            z-index: 1;
         }
         header .cta {
             margin-top: 1.5rem;
+            z-index: 1;
         }
         header .cta a {
             text-decoration: none;
@@ -85,52 +101,6 @@
         }
         header .cta a:hover {
             background: #88c9bf;
-        }
-
-        /* Services Section */
-        section#services {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        section#services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-        .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(30% - 2rem);
-            max-width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #00487c;
-        }
-        .service-card p {
-            color: #666;
-            font-size: 1rem;
-        }
-        .service-card a {
-            color: #88c9bf;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .service-card a:hover {
-            text-decoration: underline;
         }
 
         /* Footer */
@@ -174,28 +144,6 @@
         <a href="contact.html">Contact Us</a>
     </div>
 </header>
-
-<!-- Services Section -->
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services-container">
-        <div class="service-card">
-            <h3>Bookkeeping</h3>
-            <p>Stay organized with tailored bookkeeping services for your business.</p>
-            <a href="bookkeeping.html">Learn More</a>
-        </div>
-        <div class="service-card">
-            <h3>Financial Planning</h3>
-            <p>Create a roadmap for your financial success with our expert guidance.</p>
-            <a href="financial-planning.html">Learn More</a>
-        </div>
-        <div class="service-card">
-            <h3>Business Consulting</h3>
-            <p>Optimize your business operations with our proven strategies.</p>
-            <a href="business-consulting.html">Learn More</a>
-        </div>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer>
